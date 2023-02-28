@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import TopElement from "./components/TopElement";
+import Card from "./components/Card";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<TopElement />
+			<Card name="Food" curr={200} max={1000} size={320} />
+			<Card name="Entertainment" curr={110} max={500} size={200} />
+			<Card name="Medical" curr={300} max={1500} size={300} />
+		</div>
+	);
 }
 
 export default App;
