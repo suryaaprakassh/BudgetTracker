@@ -1,4 +1,5 @@
-const Card = ({ name, curr, max, size }) => {
+import { ProgressBar } from "../components/ProgressBar";
+const Card = ({ name, curr, max }) => {
 	return (
 		<div className="my-5 p-4 border-2 border-black-300 rounded-md bg-gray-100 w-[550px] mx-auto ">
 			<div className="flex justify-between">
@@ -10,11 +11,7 @@ const Card = ({ name, curr, max, size }) => {
 				</div>
 			</div>
 			<div className="flex justify-between items-center">
-				<div className="w-8/12 h-4 rounded-lg bg-gray-200 ">
-					<div
-						className="w-8/12 h-4 rounded-lg bg-cyan-500"
-						style={{ width: size }}></div>
-				</div>
+				<ProgressBar size={(curr / max) * 100} />
 				<button className="mx-5 p-2 bg-teal-600 text-white rounded-md ">
 					Add Expense
 				</button>
