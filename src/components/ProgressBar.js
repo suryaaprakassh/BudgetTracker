@@ -1,6 +1,7 @@
 export const ProgressBar = ({ size }) => {
+	console.log(size);
 	const styles = {
-		width: `${size}%`,
+		width: `${size < 100 ? size : 100}%`,
 	};
 	if (size > 90) {
 		styles.backgroundColor = "#ff3737";

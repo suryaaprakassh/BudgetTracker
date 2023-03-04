@@ -1,5 +1,5 @@
 import React from "react";
-export default function Modal({ open, children, setOpen, submit }) {
+export default function Modal({ open, children, setOpen }) {
 	if (!open) return null;
 	const formStyles = {
 		position: "fixed",
@@ -25,17 +25,12 @@ export default function Modal({ open, children, setOpen, submit }) {
 				{children}
 				<div className="flex justify-around">
 					<button
-						className="bg-teal-600 text-white rounded-md px-5 py-2 font-medium "
+						className="absolute top-3 right-3 bg-teal-600 text-white rounded-md px-2 py-0 font-medium "
 						onClick={() => {
 							setOpen(false);
 						}}>
-						close
+						x
 					</button>
-					{submit && (
-						<button className="bg-green-500 text-white rounded-md px-5 py-2 font-medium ">
-							submit
-						</button>
-					)}
 				</div>
 			</div>
 		</>
