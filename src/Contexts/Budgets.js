@@ -17,6 +17,9 @@ export const BudgetProvider = ({ children }) => {
 			return [...prevBudget, { id: uuid(), name, max }];
 		});
 	};
+	const deleteBudget = (id) => {
+		setBudget(budget.filter((f) => f.id !== id));
+	};
 	const addExpense = ({ desc, amount, budget_id }) => {
 		setExpense((prevExpense) => {
 			return [...prevExpense, { id: uuid(), desc, amount, budget_id }];
@@ -25,9 +28,19 @@ export const BudgetProvider = ({ children }) => {
 	const getExpense = (id) => {
 		return expense.filter((f) => f.budget_id === id);
 	};
+	const deleteExpense = (id) => {
+		setExpense(expense.filter((f) => f.id !== id));
+	};
 	return (
 		<BudgetContext.Provider
-			value={{ budget, addBudget, addExpense, getExpense }}>
+			value={{
+				budget,
+				addBudget,
+				deleteBudget,
+				deleteExpense,
+				addExpense,
+				getExpense,
+			}}>
 			{children}
 		</BudgetContext.Provider>
 	);
