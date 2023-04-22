@@ -20,7 +20,7 @@ export const Expenses = ({ id }) => {
 				onClick={() => {
 					deleteBudget(id);
 				}}
-				className="font-medium ml-5 p-2 bg-red-500 ml-auto text-white rounded-md ">
+				className="font-medium  p-2 bg-red-500 ml-auto text-white rounded-md ">
 				Delete
 			</button>
 		</div>

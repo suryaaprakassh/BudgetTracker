@@ -11,7 +11,9 @@ const TopElement = ({ setOpen }) => {
 				}}>
 				Add Budget
 			</button>
-			<button className="mx-5 border-solid border-2 rounded-md border-teal-600 p-1 font-medium text-md  ">
+			<button className="mx-5 border-solid border-2 rounded-md border-teal-600 p-1 font-medium text-md  " onClick={()=>{
+
+      }}>
 				Add Expense
 			</button>
 		</div>
