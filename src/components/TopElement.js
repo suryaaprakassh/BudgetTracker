@@ -1,4 +1,4 @@
-const TopElement = ({ setOpen }) => {
+const TopElement = ({ setOpen ,setLimitOpen}) => {
 	return (
 		<div className="flex space-between p-5">
 			<p className="inline-block mr-auto text-2xl font-semibold">
@@ -12,9 +12,9 @@ const TopElement = ({ setOpen }) => {
 				Add Budget
 			</button>
 			<button className="mx-5 border-solid border-2 rounded-md border-teal-600 p-1 font-medium text-md  " onClick={()=>{
-
+        setLimitOpen(true);
       }}>
-				Add Expense
+        Set Limit
 			</button>
 		</div>
 	);
