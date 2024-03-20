@@ -1,7 +1,7 @@
 import { ProgressBar } from "./ProgressBar";
 import { useBudgets } from "../Contexts/Budgets";
 import { useEffect, useState } from "react";
-import useLocalStorage from "../Contexts/useLocalStorage";
+import {useLocalStorage} from "@uidotdev/usehooks"
 
 export default function SideElement() {
   const { expense } = useBudgets();
@@ -50,7 +50,7 @@ export default function SideElement() {
         })
       }
     }
-  },[expense])
+  },[expense,limit])
   
   return (
     <div className="w-1/5 justify-self-start">
