@@ -50,20 +50,20 @@ export default function SideElement() {
         })
       }
     }
-  },[expense,limit])
+  },[expense])
   
   return (
     <div className="w-1/5 justify-self-start">
       <div>
-        <h2>Daily Spend {spend.daily}</h2>
+        <h2>Daily Spend {spend.daily} / {limit.daily}</h2>
         <ProgressBar size={spend.daily/parseInt(limit.daily)*100} />
       </div>
       <div>
-        <h2>Montly Spend {spend.monthly}</h2>
+        <h2>Montly Spend {spend.monthly} / {limit.monthly}</h2>
         <ProgressBar size={spend.monthly/parseInt(limit.monthly)*100} />
       </div>
       <div>
-        <h2>Yearly Spend {spend.yearly}</h2>
+        <h2>Yearly Spend {spend.yearly} / {limit.yearly}</h2>
         <ProgressBar size={spend.yearly/parseInt(limit.yearly)*100} />
       </div>
     </div>

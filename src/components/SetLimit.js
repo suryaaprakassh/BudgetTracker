@@ -7,9 +7,9 @@ const SetLimit = ({ closePopup }) => {
     yearly: 0,
   });
   const [limitState, setLimitState] = useState({
-    daily: 0,
-    monthly: 0,
-    yearly: 0,
+    daily: limit.daily,
+    monthly: limit.monthly,
+    yearly: limit.yearly,
   });
   function addTask() {
     setLimit(() => {
